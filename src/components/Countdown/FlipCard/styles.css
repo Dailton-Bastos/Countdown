@@ -1,0 +1,82 @@
+.countdown__flipcard {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+  height: 110px;
+  width: 100px;
+}
+
+.countdown__flipcard > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-weight: 700;
+  color: #de4848;
+  font-size: 5.94em;
+  line-height: 110px;
+  text-align: center;
+}
+
+.countdown__flipcard--top {
+  z-index: 3;
+  background-color: #f7f7f7;
+  transform-origin: 50% 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: perspective(200px);
+}
+
+.countdown__flipcard--topBack {
+  z-index: 4;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  transform: perspective(200px) rotateX(180deg);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.countdown__flipcard--topBack span {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.countdown__flipcard--bottom {
+  z-index: 1;
+}
+
+.countdown__flipcard--bottom::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.countdown__flipcard--top,
+.countdown__flipcard--topBack {
+  height: 50%;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.countdown__flipcard--top::after,
+.countdown__flipcard--bottomBack::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}

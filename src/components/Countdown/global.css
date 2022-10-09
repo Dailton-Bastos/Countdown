@@ -1,0 +1,31 @@
+@import url('./FlipCard/styles.css');
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  min-height: 100vh;
+}
+
+.countdown__blockTime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown__blockTime--title {
+  display: block;
+  margin-bottom: 15px;
+  font: normal 0.94em 'Arial';
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.countdown__blockTime--flipCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
