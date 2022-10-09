@@ -8,10 +8,10 @@ const getRemainingTime = (futureDate: string) => {
   }
 
   return {
-    seconds: '00',
-    minutes: '00',
-    hours: '00',
-    days: '00',
+    seconds: 0,
+    minutes: 0,
+    hours: 0,
+    days: 0,
   };
 };
 
@@ -49,20 +49,26 @@ const getRemainingTotal = (date: string) => {
   const minutes = getMinutes(date) % 60;
   const seconds = getSeconds(date) % 60;
 
+  // return {
+  //   days: String(days),
+  //   hours: padWithZeros(hours, 2),
+  //   minutes: padWithZeros(minutes, 2),
+  //   seconds: padWithZeros(seconds, 2),
+  // };
   return {
-    days: String(days),
-    hours: padWithZeros(hours, 2),
-    minutes: padWithZeros(minutes, 2),
-    seconds: padWithZeros(seconds, 2),
+    days,
+    hours,
+    minutes,
+    seconds,
   };
 };
 
-const padWithZeros = (number: number, minLength: number) => {
-  const numberString = number.toString();
+// const padWithZeros = (number: number, minLength: number) => {
+//   const numberString = number.toString();
 
-  if (numberString.length >= minLength) return numberString;
+//   if (numberString.length >= minLength) return numberString;
 
-  return '0'.repeat(minLength - numberString.length) + numberString;
-};
+//   return '0'.repeat(minLength - numberString.length) + numberString;
+// };
 
 export { getRemainingTime };

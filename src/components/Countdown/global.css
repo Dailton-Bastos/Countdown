@@ -29,3 +29,11 @@
   justify-content: center;
   gap: 10px;
 }
+
+/* TESTE */
+.flipClock {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 30px;
+}
