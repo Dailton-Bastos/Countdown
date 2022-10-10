@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FlipCard } from './FlipCard';
+// import { FlipCard } from './FlipCard';
 
 import { FlipUnitContainer } from '../FlipUnitContainer';
 
@@ -106,7 +106,7 @@ export const Countdown = ({ futureDate }: Props) => {
         <FlipUnitContainer unit="seconds" digit={remainingTimeSeconds.seconds} shuffle={remainingTimeSeconds.shuffle} />
       </div>
 
-      <div className="countdown">
+      {/* <div className="countdown">
         <div className="countdown__blockTime">
           <span className="countdown__blockTime--title">Days</span>
           <div className="countdown__blockTime--flipCard">
@@ -134,7 +134,7 @@ export const Countdown = ({ futureDate }: Props) => {
             <FlipCard value={remainingTimeSeconds.seconds} />
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

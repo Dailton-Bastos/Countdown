@@ -29,12 +29,14 @@ export const FlipUnitContainer = ({ digit, shuffle, unit }: Props) => {
   const animation2 = !shuffle ? 'fold' : 'unfold';
 
   return (
-    <div className="flipUnitContainer">
-      <StaticCard position="upperCard" digit={currentDigitFormatted} />
-      <StaticCard position="lowerCard" digit={previousDigitFormatted} />
+    <div className="flipClock__Card">
+      <div className="flipUnitContainer">
+        <StaticCard position="upperCard" digit={currentDigitFormatted} />
+        <StaticCard position="lowerCard" digit={previousDigitFormatted} />
 
-      <AnimatedCard digit={digit1} animation={animation1} />
-      <AnimatedCard digit={digit2} animation={animation2} />
+        <AnimatedCard digit={digit1} animation={animation1} />
+        <AnimatedCard digit={digit2} animation={animation2} />
+      </div>
     </div>
   );
 };
