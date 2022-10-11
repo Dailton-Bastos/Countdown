@@ -1,4 +1,5 @@
 @import url('./FlipCardAnimated/styles.css');
+@import url('./FlipCard/styles.css');
 
 .countdown {
   display: flex;
@@ -8,15 +9,17 @@
   min-height: 100vh;
 }
 
-.countdown__title h2 {
+.countdownTitle {
   margin-bottom: 30px;
+}
+
+.countdownTitle h2 {
   color: #dddddd;
   text-transform: uppercase;
   font-size: 60px;
 }
 
-/* TESTE */
-.flipClock {
+.countdownFlipCards {
   display: flex;
   align-items: center;
   justify-content: center;

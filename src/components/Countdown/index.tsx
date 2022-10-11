@@ -1,8 +1,6 @@
 import React from 'react';
 
-// import { FlipCard } from './FlipCard';
-
-import { FlipUnitContainer } from '../FlipUnitContainer';
+import { FlipCard } from './FlipCard';
 
 import { getRemainingTime } from '../../utils/getRemainingTime';
 
@@ -98,57 +96,17 @@ export const Countdown = ({ futureDate }: Props) => {
   }, [futureDate, updateRemainingTime]);
 
   return (
-    <>
-      <div className="countdown">
-        <div className="countdown__title">
-          <h2>Faltam</h2>
-        </div>
-
-        <div className="flipClock">
-          <FlipUnitContainer unit="Dias" digit={remainingTimeDays.days} shuffle={remainingTimeDays.shuffle} />
-          <FlipUnitContainer unit="Horas" digit={remainingTimeHours.hours} shuffle={remainingTimeHours.shuffle} />
-          <FlipUnitContainer
-            unit="Minutos"
-            digit={remainingTimeMinutes.minutes}
-            shuffle={remainingTimeMinutes.shuffle}
-          />
-          <FlipUnitContainer
-            unit="Segundos"
-            digit={remainingTimeSeconds.seconds}
-            shuffle={remainingTimeSeconds.shuffle}
-          />
-        </div>
+    <div className="countdown">
+      <div className="countdownTitle">
+        <h2>Faltam</h2>
       </div>
 
-      {/* <div className="countdown">
-        <div className="countdown__blockTime">
-          <span className="countdown__blockTime--title">Days</span>
-          <div className="countdown__blockTime--flipCard">
-            <FlipCard value={remainingTimeDays.days} />
-          </div>
-        </div>
-
-        <div className="countdown__blockTime">
-          <span className="countdown__blockTime--title">Hours</span>
-          <div className="countdown__blockTime--flipCard">
-            <FlipCard value={remainingTimeHours.hours} />
-          </div>
-        </div>
-
-        <div className="countdown__blockTime">
-          <span className="countdown__blockTime--title">Minutes</span>
-          <div className="countdown__blockTime--flipCard">
-            <FlipCard value={remainingTimeMinutes.minutes} />
-          </div>
-        </div>
-
-        <div className="countdown__blockTime">
-          <span className="countdown__blockTime--title">Seconds</span>
-          <div className="countdown__blockTime--flipCard">
-            <FlipCard value={remainingTimeSeconds.seconds} />
-          </div>
-        </div>
-      </div> */}
-    </>
+      <div className="countdownFlipCards">
+        <FlipCard unit="Dias" digit={remainingTimeDays.days} shuffle={remainingTimeDays.shuffle} />
+        <FlipCard unit="Horas" digit={remainingTimeHours.hours} shuffle={remainingTimeHours.shuffle} />
+        <FlipCard unit="Minutos" digit={remainingTimeMinutes.minutes} shuffle={remainingTimeMinutes.shuffle} />
+        <FlipCard unit="Segundos" digit={remainingTimeSeconds.seconds} shuffle={remainingTimeSeconds.shuffle} />
+      </div>
+    </div>
   );
 };

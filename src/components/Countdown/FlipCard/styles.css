@@ -1,17 +1,17 @@
-.flipClockCard {
+.flipCard {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.flipClockCard__title {
+.flipCardUnit {
   padding-top: 5px;
   text-transform: uppercase;
   color: #dddddd;
 }
 
-.flipClock__Card {
+.flipCardWrapper {
   padding: 8px 8px 0;
   background-color: #ababab;
   border-radius: 18px;
@@ -21,7 +21,7 @@
   width: 140px;
 }
 
-.flipUnitContainer {
+.flipCardContent {
   display: block;
   position: relative;
   width: 100%;

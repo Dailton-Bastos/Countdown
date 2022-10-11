@@ -1,7 +1,5 @@
-import { StaticCard } from '../StaticCard';
-import { FlipCardAnimated } from '../Countdown/FlipCardAnimated';
-
-import './styles.css';
+import { StaticCard } from '../../StaticCard';
+import { FlipCardAnimated } from '../FlipCardAnimated';
 
 interface Props {
   digit: number;
@@ -9,7 +7,7 @@ interface Props {
   unit: 'Dias' | 'Horas' | 'Minutos' | 'Segundos';
 }
 
-export const FlipUnitContainer = ({ digit, shuffle, unit }: Props) => {
+export const FlipCard = ({ digit, shuffle, unit }: Props) => {
   let previousDigit = digit + 1;
   const currentDigit = digit.toString().padStart(2, '0');
 
@@ -29,9 +27,9 @@ export const FlipUnitContainer = ({ digit, shuffle, unit }: Props) => {
   const animation2 = !shuffle ? 'fold' : 'unfold';
 
   return (
-    <div className="flipClockCard">
-      <div className="flipClock__Card">
-        <div className="flipUnitContainer">
+    <div className="flipCard">
+      <div className="flipCardWrapper">
+        <div className="flipCardContent">
           <StaticCard position="upperCard" digit={currentDigitFormatted} />
           <StaticCard position="lowerCard" digit={previousDigitFormatted} />
 
@@ -40,7 +38,7 @@ export const FlipUnitContainer = ({ digit, shuffle, unit }: Props) => {
         </div>
       </div>
 
-      <span className="flipClockCard__title">{unit}</span>
+      <span className="flipCardUnit">{unit}</span>
     </div>
   );
 };
