@@ -1,5 +1,6 @@
 @import url('./FlipCardAnimated/styles.css');
 @import url('./FlipCard/styles.css');
+@import url('./FlipCardStatic/styles.css');
 
 .countdown {
   display: flex;

@@ -1,4 +1,4 @@
-import { StaticCard } from '../../StaticCard';
+import { FlipCardStatic } from '../FlipCardStatic';
 import { FlipCardAnimated } from '../FlipCardAnimated';
 
 interface Props {
@@ -30,8 +30,8 @@ export const FlipCard = ({ digit, shuffle, unit }: Props) => {
     <div className="flipCard">
       <div className="flipCardWrapper">
         <div className="flipCardContent">
-          <StaticCard position="upperCard" digit={currentDigitFormatted} />
-          <StaticCard position="lowerCard" digit={previousDigitFormatted} />
+          <FlipCardStatic position="upperCard" digit={currentDigitFormatted} />
+          <FlipCardStatic position="lowerCard" digit={previousDigitFormatted} />
 
           <FlipCardAnimated digit={digit1} animation={animation1} />
           <FlipCardAnimated digit={digit2} animation={animation2} />
