@@ -99,11 +99,25 @@ export const Countdown = ({ futureDate }: Props) => {
 
   return (
     <>
-      <div className="flipClock">
-        <FlipUnitContainer unit="days" digit={remainingTimeDays.days} shuffle={remainingTimeDays.shuffle} />
-        <FlipUnitContainer unit="hours" digit={remainingTimeHours.hours} shuffle={remainingTimeHours.shuffle} />
-        <FlipUnitContainer unit="minutes" digit={remainingTimeMinutes.minutes} shuffle={remainingTimeMinutes.shuffle} />
-        <FlipUnitContainer unit="seconds" digit={remainingTimeSeconds.seconds} shuffle={remainingTimeSeconds.shuffle} />
+      <div className="countdown">
+        <div className="countdown__title">
+          <h2>Faltam</h2>
+        </div>
+
+        <div className="flipClock">
+          <FlipUnitContainer unit="Dias" digit={remainingTimeDays.days} shuffle={remainingTimeDays.shuffle} />
+          <FlipUnitContainer unit="Horas" digit={remainingTimeHours.hours} shuffle={remainingTimeHours.shuffle} />
+          <FlipUnitContainer
+            unit="Minutos"
+            digit={remainingTimeMinutes.minutes}
+            shuffle={remainingTimeMinutes.shuffle}
+          />
+          <FlipUnitContainer
+            unit="Segundos"
+            digit={remainingTimeSeconds.seconds}
+            shuffle={remainingTimeSeconds.shuffle}
+          />
+        </div>
       </div>
 
       {/* <div className="countdown">

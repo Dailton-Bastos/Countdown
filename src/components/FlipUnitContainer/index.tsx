@@ -6,14 +6,14 @@ import './styles.css';
 interface Props {
   digit: number;
   shuffle: boolean;
-  unit: 'days' | 'hours' | 'minutes' | 'seconds';
+  unit: 'Dias' | 'Horas' | 'Minutos' | 'Segundos';
 }
 
 export const FlipUnitContainer = ({ digit, shuffle, unit }: Props) => {
   let previousDigit = digit + 1;
   const currentDigit = digit.toString().padStart(2, '0');
 
-  if (unit !== 'hours') {
+  if (unit !== 'Horas') {
     previousDigit = previousDigit === 60 ? 59 : previousDigit;
   } else {
     previousDigit = previousDigit === 24 ? 23 : previousDigit;
@@ -29,14 +29,18 @@ export const FlipUnitContainer = ({ digit, shuffle, unit }: Props) => {
   const animation2 = !shuffle ? 'fold' : 'unfold';
 
   return (
-    <div className="flipClock__Card">
-      <div className="flipUnitContainer">
-        <StaticCard position="upperCard" digit={currentDigitFormatted} />
-        <StaticCard position="lowerCard" digit={previousDigitFormatted} />
+    <div className="flipClockCard">
+      <div className="flipClock__Card">
+        <div className="flipUnitContainer">
+          <StaticCard position="upperCard" digit={currentDigitFormatted} />
+          <StaticCard position="lowerCard" digit={previousDigitFormatted} />
 
-        <AnimatedCard digit={digit1} animation={animation1} />
-        <AnimatedCard digit={digit2} animation={animation2} />
+          <AnimatedCard digit={digit1} animation={animation1} />
+          <AnimatedCard digit={digit2} animation={animation2} />
+        </div>
       </div>
+
+      <span className="flipClockCard__title">{unit}</span>
     </div>
   );
 };

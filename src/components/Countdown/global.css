@@ -4,8 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 45px;
+  flex-direction: column;
+  /* gap: 45px; */
   min-height: 100vh;
+}
+
+.countdown__title h2 {
+  margin-bottom: 30px;
+  color: #dddddd;
+  text-transform: uppercase;
+  font-size: 60px;
 }
 
 .countdown__blockTime {
@@ -35,6 +43,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  min-height: 100vh;
 }

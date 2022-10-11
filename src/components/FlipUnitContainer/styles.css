@@ -16,6 +16,19 @@
   }
 }
 
+.flipClockCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flipClockCard__title {
+  padding-top: 5px;
+  text-transform: uppercase;
+  color: #dddddd;
+}
+
 .flipClock__Card {
   padding: 8px 8px 0;
   background-color: #ababab;
@@ -112,6 +125,7 @@
   background-color: #3c3d3c;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  border-top: 1px solid #606060;
 }
 
 .flipCard.fold span {
