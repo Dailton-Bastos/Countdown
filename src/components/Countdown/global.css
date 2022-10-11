@@ -1,11 +1,12 @@
 @import url('./FlipCard/styles.css');
 
+@import url('./FlipCardAnimated/styles.css');
+
 .countdown {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* gap: 45px; */
   min-height: 100vh;
 }
 
@@ -14,28 +15,6 @@
   color: #dddddd;
   text-transform: uppercase;
   font-size: 60px;
-}
-
-.countdown__blockTime {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.countdown__blockTime--title {
-  display: block;
-  margin-bottom: 15px;
-  font: normal 0.94em 'Arial';
-  color: #1a1a1a;
-  text-transform: uppercase;
-}
-
-.countdown__blockTime--flipCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
 }
 
 /* TESTE */
