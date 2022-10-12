@@ -56,3 +56,10 @@
   height: 50%;
   overflow: hidden;
 }
+
+@media (max-width: 1024px) {
+  .flipCardStatic--upperCard span,
+  .flipCardStatic--lowerCard span {
+    font-size: 3em;
+  }
+}

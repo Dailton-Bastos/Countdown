@@ -24,3 +24,9 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 1024px) {
+  .countdownTitle h2 {
+    font-size: 25px;
+  }
+}

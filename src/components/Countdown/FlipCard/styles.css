@@ -27,6 +27,17 @@
   width: 140px;
 }
 
+@media (max-width: 1024px) {
+  .flipCardUnit {
+    font-size: 12px;
+  }
+
+  .flipCardWrapper {
+    height: 100px;
+    width: 100px;
+  }
+}
+
 .flipCardWrapper.skeleton {
   position: relative;
   overflow: hidden;

@@ -1,6 +1,8 @@
 import React from 'react';
 import { BannerTv } from '../BannerTv';
 
+import './global.css';
+
 export const BlackFriday = () => {
   const banner = React.useMemo(() => {
     return {
@@ -10,7 +12,7 @@ export const BlackFriday = () => {
   }, []);
   return (
     <main className="blackFriday__main">
-      <section className="blackFriday__area--banner">
+      <section className="blackFriday__area blackFriday__area--banner">
         <BannerTv banner={banner} alt="Black Friday" />
       </section>
     </main>
