@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { FlipCardStatic } from '../FlipCardStatic';
 import { FlipCardAnimated } from '../FlipCardAnimated';
 
@@ -8,6 +10,8 @@ interface Props {
 }
 
 export const FlipCard = ({ digit, shuffle, unit }: Props) => {
+  const [fakeLoading, setFakeLoading] = React.useState(true);
+
   let previousDigit = digit + 1;
   const currentDigit = digit.toString().padStart(2, '0');
 
@@ -26,10 +30,16 @@ export const FlipCard = ({ digit, shuffle, unit }: Props) => {
   const animation1 = shuffle ? 'fold' : 'unfold';
   const animation2 = !shuffle ? 'fold' : 'unfold';
 
+  React.useEffect(() => {
+    setInterval(() => {
+      setFakeLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <div className="flipCard">
-      <div className="flipCardWrapper">
-        <div className="flipCardContent">
+      <div className={`flipCardWrapper ${fakeLoading ? 'skeleton' : ''}`}>
+        <div className={`flipCardContent ${fakeLoading ? 'skeleton' : ''}`}>
           <FlipCardStatic position="upperCard" digit={currentDigitFormatted} />
           <FlipCardStatic position="lowerCard" digit={previousDigitFormatted} />
 
