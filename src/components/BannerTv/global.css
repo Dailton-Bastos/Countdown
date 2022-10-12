@@ -1,0 +1,30 @@
+.blackFriday__banner {
+  display: block;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.banner__default {
+  display: block;
+  width: 100%;
+}
+
+.banner__default img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .banner__default.hide--lg {
+    display: none;
+  }
+}
+
+@media (max-width: 1025px) {
+  .banner__default.hide--sm {
+    display: none;
+  }
+}
