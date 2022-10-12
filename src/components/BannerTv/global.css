@@ -9,12 +9,14 @@
 .banner__default {
   display: block;
   width: 100%;
+  background-color: #3e3e3e;
 }
 
 .banner__default img {
   display: block;
   height: auto;
   max-width: 100%;
+  opacity: 0;
 }
 
 @media (min-width: 1024px) {
@@ -27,4 +29,20 @@
   .banner__default.hide--sm {
     display: none;
   }
+}
+
+.banner__countdown--area {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.banner__countdown {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1224px;
 }
