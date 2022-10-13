@@ -1,5 +1,6 @@
 import React from 'react';
 import { BannerTv } from '../BannerTv';
+import { Subscribe } from '../Subscribe';
 
 import './global.css';
 
@@ -14,6 +15,10 @@ export const BlackFriday = () => {
     <main className="blackFriday__main">
       <section className="blackFriday__area blackFriday__area--banner">
         <BannerTv banner={banner} alt="Black Friday" />
+      </section>
+
+      <section className="blackFriday__area blackFriday__area--subscribe">
+        <Subscribe />
       </section>
     </main>
   );
