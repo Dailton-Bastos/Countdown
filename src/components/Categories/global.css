@@ -1,0 +1,52 @@
+@import url('./Category/styles.css');
+
+.blackFriday__categories {
+  background-color: #212121;
+  padding: 0 50px;
+  width: 100%;
+}
+
+.categories__content {
+  max-width: 1224px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 80px 0;
+}
+
+.categories__content--title h1 {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.categories__content--subTitle h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.categories__content--grid {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .blackFriday__categories {
+    padding: 0 15px;
+  }
+
+  .categories__content {
+    padding: 25px 0;
+  }
+
+  .categories__content--title h1 {
+    font-size: 20px;
+  }
+
+  .categories__content--subTitle h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}

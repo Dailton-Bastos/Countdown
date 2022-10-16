@@ -33,7 +33,7 @@ export const FlipCard = ({ digit, shuffle, unit }: Props) => {
   React.useEffect(() => {
     setInterval(() => {
       setFakeLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
