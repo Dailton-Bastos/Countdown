@@ -10,13 +10,14 @@
 }
 
 .countdownTitle {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .countdownTitle h2 {
   color: #fff;
   text-transform: uppercase;
-  font-size: 45px;
+  font-size: 40px;
+  line-height: 58px;
 }
 
 .countdownFlipCards {
@@ -27,6 +28,6 @@
 
 @media (max-width: 1024px) {
   .countdownTitle h2 {
-    font-size: 25px;
+    font-size: 28px;
   }
 }

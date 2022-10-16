@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition: hover 0.3s;
 }
 
 .product__content--top .product__content--position {
@@ -27,11 +28,12 @@
 }
 
 .product__content--top:hover .product__content--image {
-  border: 2px solid #d90429;
+  border: 2px solid #cf062d;
+  /* box-shadow: 0px 0px 2px 2px #cf062d; */
 }
 
 .product__content--top:hover .product__content--position {
-  color: #d90429;
+  color: #cf062d;
 }
 
 .product__content--image {

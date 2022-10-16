@@ -1,6 +1,81 @@
 import { Product } from './Product';
 
+import productImagem from '../../assets/product_image.png';
+
 import './global.css';
+
+const products = [
+  {
+    link: '#',
+    image: productImagem,
+    position: '1',
+    brand: 'Littmann',
+    name: 'Lorem inpsum',
+  },
+  {
+    link: '#',
+    image: productImagem,
+    position: '2',
+    brand: 'Spirit',
+    name: 'Lorem inpsum',
+  },
+  {
+    link: '#',
+    image: productImagem,
+    position: '3',
+    brand: 'MD',
+    name: 'Lorem inpsum',
+  },
+  {
+    link: '#',
+    image: productImagem,
+    position: '4',
+    brand: 'Injex',
+    name: 'Lorem inpsum',
+  },
+  {
+    link: '#',
+    image: productImagem,
+    position: '5',
+    brand: 'Fibrasca',
+    name: 'Lorem inpsum',
+  },
+  {
+    link: '#',
+    image: productImagem,
+    position: '6',
+    brand: 'Littmann',
+    name: 'Lorem inpsum',
+  },
+  {
+    link: '#',
+    image: productImagem,
+    position: '7',
+    brand: 'Spirit',
+    name: 'Lorem inpsum',
+  },
+  {
+    link: '#',
+    image: productImagem,
+    position: '8',
+    brand: 'Injex',
+    name: 'Lorem inpsum',
+  },
+  {
+    link: '#',
+    image: productImagem,
+    position: '9',
+    brand: 'MD',
+    name: 'Lorem inpsum',
+  },
+  {
+    link: '#',
+    image: productImagem,
+    position: '10',
+    brand: 'Spirit',
+    name: 'Lorem inpsum',
+  },
+];
 
 export const ListProducts = () => {
   return (
@@ -15,64 +90,16 @@ export const ListProducts = () => {
         </div>
 
         <div className="products__content--grid">
-          <Product
-            link="#"
-            image="https://via.placeholder.com/200x200/"
-            position="1"
-            brand="Littmann"
-            name="Lorem inpsum"
-          />
-          <Product
-            link="#"
-            image="https://via.placeholder.com/200x200/"
-            position="2"
-            brand="Spirit"
-            name="Lorem inpsum"
-          />
-          <Product link="#" image="https://via.placeholder.com/200x200/" position="3" brand="MD" name="Lorem inpsum" />
-          <Product
-            link="#"
-            image="https://via.placeholder.com/200x200/"
-            position="4"
-            brand="Injex"
-            name="Lorem inpsum"
-          />
-          <Product
-            link="#"
-            image="https://via.placeholder.com/200x200/"
-            position="5"
-            brand="Fibrasca"
-            name="Lorem inpsum"
-          />
-          <Product
-            link="#"
-            image="https://via.placeholder.com/200x200/"
-            position="6"
-            brand="Fibrasca"
-            name="Lorem inpsum"
-          />
-          <Product
-            link="#"
-            image="https://via.placeholder.com/200x200/"
-            position="7"
-            brand="Littmann"
-            name="Lorem inpsum"
-          />
-          <Product
-            link="#"
-            image="https://via.placeholder.com/200x200/"
-            position="8"
-            brand="Spirit"
-            name="Lorem inpsum"
-          />
-          <Product link="#" image="https://via.placeholder.com/200x200/" position="9" brand="MD" name="Lorem inpsum" />
-          <Product
-            link="#"
-            image="https://via.placeholder.com/200x200/"
-            position="10"
-            brand="Injex"
-            name="Lorem inpsum"
-          />
+          {products.map((product) => (
+            <Product
+              key={product.position}
+              link={product.link}
+              image={product.image}
+              position={product.position}
+              brand={product.brand}
+              name={product.name}
+            />
+          ))}
         </div>
       </div>
     </div>

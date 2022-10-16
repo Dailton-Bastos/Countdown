@@ -16,7 +16,6 @@
   display: block;
   height: auto;
   max-width: 100%;
-  opacity: 0;
 }
 
 @media (min-width: 1025px) {
